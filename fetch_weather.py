@@ -119,3 +119,4 @@ def main(mytimer: func.TimerRequest) -> None:
         if conn:
             conn.close()
 
+#test
