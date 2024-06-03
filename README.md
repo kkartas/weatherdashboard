@@ -33,7 +33,7 @@ cd weather-dashboard
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows use \`venv\Scripts\activate\`
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 ```
 
 ### Step 3: Install Dependencies
@@ -44,16 +44,13 @@ pip install -r requirements.txt
 
 ### Step 4: Set Up Environment Variables
 
-Create a \`.env\` file in the root directory of the project and add the following environment variables:
+Create a `.env` file in the root directory of the project and add the following environment variables:
 
 ```plaintext
 SQL_SERVER=your_server
 SQL_USER=your_user
 SQL_PASSWORD=your_password
 DATABASE_URL=DRIVER={ODBC Driver 17 for SQL Server};SERVER=your_server;DATABASE=WeatherDB;UID=your_user;PWD=your_password
-API_KEY=your_api_key
-APPLICATION_KEY=your_application_key
-MAC=your_device_mac
 ```
 
 ### Step 5: Create the Database
@@ -70,13 +67,13 @@ python scripts/create_db.py
 python run.py
 ```
 
-Open your web browser and navigate to \`http://127.0.0.1:5000\` to view the application.
+Open your web browser and navigate to `http://127.0.0.1:5000` to view the application.
 
 ## Usage
 
 ### Settings
 
-- Navigate to \`http://127.0.0.1:5000/settings\` to enter and save your Ecowitt API credentials.
+- Navigate to `http://127.0.0.1:5000/settings` to enter and save your Ecowitt API credentials.
 
 ### Fetching Data
 
@@ -116,4 +113,4 @@ Contributions are welcome! Please open an issue or submit a pull request if you 
 
 ## License
 
-This project is licensed under the MIT License. See the \`LICENSE\` file for details.
+This project is licensed under the MIT License. See the `LICENSE` file for details.

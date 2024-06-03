@@ -4,7 +4,6 @@ import requests
 from dotenv import load_dotenv
 import os
 
-
 # Load environment variables
 load_dotenv()
 
@@ -57,7 +56,7 @@ def save_weather_data(data):
         pm25_ug_m3,
         pm25_24_hours_aqi,
         battery
-    ) VALUES (GETDATE(), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ) VALUES (CURRENT_TIMESTAMP, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """
     cursor.execute(insert_query, 
         data['outdoor_temperature'],
@@ -96,11 +95,11 @@ def save_weather_data(data):
     conn.close()
     print("Data saved to database")  # Confirmation message
 
-
 def fetch_weather_data():
-    api_key = os.getenv('API_KEY')
-    application_key = os.getenv('APPLICATION_KEY')
-    mac = os.getenv('MAC')
+    credentials = get_credentials()
+    api_key = credentials['api_key']
+    application_key = credentials['application_key']
+    mac = credentials['mac']
 
     params = {
         'application_key': application_key,
@@ -110,7 +109,6 @@ def fetch_weather_data():
     }
 
     response = requests.get('https://api.ecowitt.net/api/v3/device/real_time', params=params)
-    print(response.json())  # Print the response data for debugging
     return response.json()
 
 def fetch_and_save_weather_data():
@@ -121,7 +119,6 @@ def fetch_and_save_weather_data():
         save_weather_data(weather_data)
     else:
         print(f"Error fetching data: {data['msg']}")
-
 
 def parse_weather_data(data):
     parsed_data = {
@@ -172,7 +169,6 @@ def parse_weather_data(data):
 
     return parsed_data
 
-
 def save_credentials_to_db(api_key, application_key, mac):
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -188,6 +184,7 @@ def get_credentials():
     df = pd.read_sql(query, conn)
     conn.close()
     return df.iloc[0] if not df.empty else {}
+
 
 def get_last_update_timestamp():
     conn = get_db_connection()
