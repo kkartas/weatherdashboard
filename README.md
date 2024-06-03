@@ -1,5 +1,3 @@
-I apologize for that. Here is the correctly formatted `README.md`:
-
 ```markdown
 # Weather Dashboard
 
