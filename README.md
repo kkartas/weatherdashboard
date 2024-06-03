@@ -1,7 +1,7 @@
 
 # Weather Dashboard
 
-Weather Dashboard is a Python-based web application that fetches real-time weather data from the Ecowitt API, stores it in an SQL Server database, and displays it using beautiful graphics in a web interface. The application also includes a settings page for users to input their Ecowitt API credentials.
+Weather Dashboard is a Python-based web application that fetches real-time weather data from the Ecowitt API, stores it in an SQL Server database, and displays it using beautiful graphics in a web interface.
 
 ## Features
 
