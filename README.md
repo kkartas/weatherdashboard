@@ -1,4 +1,4 @@
-```markdown
+
 # Weather Dashboard
 
 Weather Dashboard is a Python-based web application that fetches real-time weather data from the Ecowitt API, stores it in an SQL Server database, and displays it using beautiful graphics in a web interface. The application also includes a settings page for users to input their Ecowitt API credentials.
@@ -24,29 +24,29 @@ Follow these steps to set up and run the Weather Dashboard application on your l
 
 ### Step 1: Clone the Repository
 
-```bash
+\`\`\`bash
 git clone https://github.com/your-username/weather-dashboard.git
 cd weather-dashboard
-```
+\`\`\`
 
 ### Step 2: Set Up Virtual Environment
 
-```bash
+\`\`\`bash
 python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-```
+source venv/bin/activate  # On Windows use \`venv\Scripts\activate\`
+\`\`\`
 
 ### Step 3: Install Dependencies
 
-```bash
+\`\`\`bash
 pip install -r requirements.txt
-```
+\`\`\`
 
 ### Step 4: Set Up Environment Variables
 
-Create a `.env` file in the root directory of the project and add the following environment variables:
+Create a \`.env\` file in the root directory of the project and add the following environment variables:
 
-```plaintext
+\`\`\`plaintext
 SQL_SERVER=your_server
 SQL_USER=your_user
 SQL_PASSWORD=your_password
@@ -54,29 +54,29 @@ DATABASE_URL=DRIVER={ODBC Driver 17 for SQL Server};SERVER=your_server;DATABASE=
 API_KEY=your_api_key
 APPLICATION_KEY=your_application_key
 MAC=your_device_mac
-```
+\`\`\`
 
 ### Step 5: Create the Database
 
 Run the script to create the database and tables:
 
-```bash
+\`\`\`bash
 python scripts/create_db.py
-```
+\`\`\`
 
 ### Step 6: Run the Application
 
-```bash
+\`\`\`bash
 python run.py
-```
+\`\`\`
 
-Open your web browser and navigate to `http://127.0.0.1:5000` to view the application.
+Open your web browser and navigate to \`http://127.0.0.1:5000\` to view the application.
 
 ## Usage
 
 ### Settings
 
-- Navigate to `http://127.0.0.1:5000/settings` to enter and save your Ecowitt API credentials.
+- Navigate to \`http://127.0.0.1:5000/settings\` to enter and save your Ecowitt API credentials.
 
 ### Fetching Data
 
@@ -90,7 +90,7 @@ Open your web browser and navigate to `http://127.0.0.1:5000` to view the applic
 
 ## Project Structure
 
-```
+\`\`\`
 weather-dashboard/
 ├── app/
 │   ├── __init__.py
@@ -108,7 +108,7 @@ weather-dashboard/
 ├── requirements.txt
 ├── run.py
 └── README.md
-```
+\`\`\`
 
 ## Contributing
 
@@ -116,7 +116,4 @@ Contributions are welcome! Please open an issue or submit a pull request if you 
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-```
-
-This `README.md` file includes all the necessary information and is properly formatted for GitHub. You can now copy and paste it directly into your GitHub repository. Adjust the repository URL and other specific details as needed.
+This project is licensed under the MIT License. See the \`LICENSE\` file for details.
