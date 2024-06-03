@@ -24,29 +24,29 @@ Follow these steps to set up and run the Weather Dashboard application on your l
 
 ### Step 1: Clone the Repository
 
-\`\`\`bash
+```bash
 git clone https://github.com/your-username/weather-dashboard.git
 cd weather-dashboard
-\`\`\`
+```
 
 ### Step 2: Set Up Virtual Environment
 
-\`\`\`bash
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows use \`venv\Scripts\activate\`
-\`\`\`
+```
 
 ### Step 3: Install Dependencies
 
-\`\`\`bash
+```bash
 pip install -r requirements.txt
-\`\`\`
+```
 
 ### Step 4: Set Up Environment Variables
 
 Create a \`.env\` file in the root directory of the project and add the following environment variables:
 
-\`\`\`plaintext
+```plaintext
 SQL_SERVER=your_server
 SQL_USER=your_user
 SQL_PASSWORD=your_password
@@ -54,21 +54,21 @@ DATABASE_URL=DRIVER={ODBC Driver 17 for SQL Server};SERVER=your_server;DATABASE=
 API_KEY=your_api_key
 APPLICATION_KEY=your_application_key
 MAC=your_device_mac
-\`\`\`
+```
 
 ### Step 5: Create the Database
 
 Run the script to create the database and tables:
 
-\`\`\`bash
+```bash
 python scripts/create_db.py
-\`\`\`
+```
 
 ### Step 6: Run the Application
 
-\`\`\`bash
+```bash
 python run.py
-\`\`\`
+```
 
 Open your web browser and navigate to \`http://127.0.0.1:5000\` to view the application.
 
@@ -90,7 +90,7 @@ Open your web browser and navigate to \`http://127.0.0.1:5000\` to view the appl
 
 ## Project Structure
 
-\`\`\`
+```
 weather-dashboard/
 ├── app/
 │   ├── __init__.py
@@ -108,7 +108,7 @@ weather-dashboard/
 ├── requirements.txt
 ├── run.py
 └── README.md
-\`\`\`
+```
 
 ## Contributing
 
