@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Weather Dashboard</h1>
+    <form action="{{ url_for('main.fetch_data') }}" method="post">
+        <button type="submit">Fetch Weather Data</button>
+    </form>
+    <div>
+        {{ graph|safe }}
+    </div>
+    <div>
+        <p>Last update: {{ last_update }}</p>
+    </div>
+</body>
+</html>

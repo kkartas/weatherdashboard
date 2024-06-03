@@ -13,6 +13,14 @@
             {{ form.api_key(size=32) }}
         </div>
         <div>
+            {{ form.application_key.label }}<br>
+            {{ form.application_key(size=32) }}
+        </div>
+        <div>
+            {{ form.mac.label }}<br>
+            {{ form.mac(size=32) }}
+        </div>
+        <div>
             {{ form.submit() }}
         </div>
     </form>
